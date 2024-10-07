@@ -84,7 +84,7 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool("wallstay", true);
             if (horizontalinput == 0)
             {
-                rb2d.velocity = new Vector2(-Mathf.Sign(transform.localScale.x) * 150f, 10);
+                rb2d.velocity = new Vector2(-Mathf.Sign(transform.localScale.x) * 80f, 10);
                 transform.localScale = new Vector3(-Mathf.Sign(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             }
             else
