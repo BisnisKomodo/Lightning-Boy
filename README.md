@@ -1,5 +1,5 @@
 ## 🔴About
-Lightning boy remains as my first simple game, inspired by Super Mario Bros where you gotta jump and avoid obstacle in order to reach to your winning places. I built the player movement system, Climbing System, Healthcontroller and the kill system for the player when falling to lava or touch nearby obstacle. Here's a small portion details about Lightning Boy development presented
+Lightning boy remains as my first simple game, inspired by Super Mario Bros where you gotta jump and avoid obstacle in order to reach to your winning places. I built the player movement system, Climbing System, Healthcontroller and the kill system for the player when falling to lava or touch nearby obstacle. Here's a small portion details about Lightning Boy development presented,
 <br>
 
 ## 🕹️Play Game
