@@ -35,123 +35,30 @@ The game was built using Unity Engine. Play the game from https://bisniskomodo.i
 ```
 <br>
 
-## 📜Lightning Boy Scripts Example (PlayerMovement)
-```
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+<br>
 
-public class PlayerMovement : MonoBehaviour
-{
-    [SerializeField] private float speed;
-    [SerializeField] private float jumpingpower;
-    [SerializeField] private LayerMask groundLayer;
-    [SerializeField] private LayerMask wallLayer;
-    private Rigidbody2D rb2d;
-    private Animator anim;
-    private BoxCollider2D boxcollider;
-    private float walljumpcooldown;
-    private float horizontalinput;
+## 🕹️Game controls
 
-    private void Awake()
-    {
-        rb2d = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
-        boxcollider = GetComponent<BoxCollider2D>();
-    }
+The following controls are bound in-game, for gameplay and testing.
 
-    private void FixedUpdate() 
-    {
-        horizontalinput = Input.GetAxis("Horizontal");
+| Key Binding       | Function          |
+| ----------------- | ----------------- |
+| W,A,S,D           | Standard movement |
+| Space             | Jump           |
+| Space (Hold)             | Jump Dash             |
 
-        //flipping the character sprite according to our A and D movement
-        if(horizontalinput > 0.01f)
-        {
-            transform.localScale = Vector3.one;
-        }
-        else if (horizontalinput < -0.01f)
-        {
-            transform.localScale = new Vector3(-1, 1, 1);
-        }
+<br>
 
-        //Animator parameter setting
-        anim.SetBool("run", horizontalinput != 0);
-        anim.SetBool("grounded", isGrounded());
-        if (rb2d.velocity.y < -0.1f && isGrounded())
-        {
-            anim.SetBool("isjumping", false);
-        }
+##  📜Scripts and Features
 
-        //wall jump kaya mario
-        if (walljumpcooldown < 0.2f)
-        {
-            rb2d.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, rb2d.velocity.y);
+You are able to do so many stuff in the game like walking, running, building, crafting, shooting, hunting, and so much more thanks to tons of scripting has been implemented to the game
 
-            if (onwall() && !isGrounded())
-            {
-                rb2d.gravityScale = 0;
-                rb2d.velocity = Vector2.zero;
-                 anim.SetBool("wallstay", true);
-            }
-            else
-            {
-                rb2d.gravityScale = 6f;
-                 anim.SetBool("wallstay", false);
-            }
-            if (Input.GetKey(KeyCode.Space))
-            {
-                Jump();
-            }
-        }
-        else
-        {
-            walljumpcooldown += Time.deltaTime;
-        }
-    }
+|  Script       | Description                                                  |
+| ------------------- | ------------------------------------------------------------ |
+| `PlayerMovement.cs` | Responsible for the playermovement using platformer way horizontally |
+| `MainMenu.cs` | Responsible for all the menu like MainMenu, Credit Scene, Tutorial and etc |
+| `DeathVoid.cs`  | Responsible the void below that appear as lava so player dies |
+| `GameManager.cs`  | Responsible for the player to collide with the winning trigger |
+| `etc`  | |
 
-    private void Jump()
-    {
-        if (isGrounded())
-        {
-            rb2d.velocity = new Vector2(rb2d.velocity.x, jumpingpower);
-            anim.SetTrigger("jump");
-            anim.SetBool("isjumping", true);
-        }
-        else if (onwall() && !isGrounded())
-        {
-            anim.SetBool("wallstay", true);
-            if (horizontalinput == 0)
-            {
-                rb2d.velocity = new Vector2(-Mathf.Sign(transform.localScale.x) * 80f, 10);
-                transform.localScale = new Vector3(-Mathf.Sign(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-            }
-            else
-            {
-                rb2d.velocity = new Vector2(-Mathf.Sign(transform.localScale.x) * 0.001f, 6);
-            }
-            walljumpcooldown = 0;
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D ded) 
-   {
-        if(ded.collider.CompareTag("void"))
-        {
-            SceneManager.LoadScene("Retrying");
-        }
-   }
-
-    private bool isGrounded()
-    {
-        RaycastHit2D raycasthit = Physics2D.BoxCast(boxcollider.bounds.center, boxcollider.bounds.size, 0, Vector2.down, 0.1f, groundLayer);
-        return raycasthit.collider != null;
-    }
-
-    private bool onwall()
-    {
-        RaycastHit2D raycasthit = Physics2D.BoxCast(boxcollider.bounds.center, boxcollider.bounds.size, 0, new Vector2(transform.localScale.x, 0), 0.1f, wallLayer);
-        return raycasthit.collider != null;
-    }
-}
-```
+<br>
