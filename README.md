@@ -1,3 +1,38 @@
+<table>
+  <tr>
+    <td align="left" width="50%">
+      <img width="100%" alt="gif1" src="https://github.com/user-attachments/assets/c2e75d74-4e36-4b87-b083-e829d74aaec0">
+    </td>
+    <td align="right" width="50%">
+      <img width="100%" alt="gif2" src="https://github.com/user-attachments/assets/0041c7f1-6260-4cba-b1b1-31c6fcd7059d">
+    </td>
+  </tr>
+</table>
+
+<p align="center">
+  <img width="100%" alt="gif3" src="https://github.com/user-attachments/assets/60b047cc-980c-4e22-a126-75aa312dbb17">
+</p>
+
+##  📜Scripts and Features
+
+You are able to do so many stuff in the game like walking, running, building, crafting, shooting, hunting, and so much more thanks to tons of scripting has been implemented to the game
+
+|  Script       | Description                                                  |
+| ------------------- | ------------------------------------------------------------ |
+| `PlayerMovement.cs` | Responsible for the playermovement using platformer way horizontally |
+| `MainMenu.cs` | Responsible for all the menu like MainMenu, Credit Scene, Tutorial and etc |
+| `DeathVoid.cs`  | Responsible the void below that appear as lava so player dies |
+| `GameManager.cs`  | Responsible for the player to collide with the winning trigger |
+| `etc`  | |
+
+<br>
+
+
+
+
+
+
+
 ## 🔴About
 Lightning boy remains as my first simple game, inspired by Super Mario Bros where you gotta jump and avoid obstacle in order to reach to your winning places. I built the player movement system, Climbing System, Healthcontroller and the kill system for the player when falling to lava or touch nearby obstacle. Here's a small portion details about Lightning Boy development presented,
 <br>
@@ -46,19 +81,5 @@ The following controls are bound in-game, for gameplay and testing.
 | W,A,S,D           | Standard movement |
 | Space             | Jump           |
 | Space (Hold)             | Jump Dash             |
-
-<br>
-
-##  📜Scripts and Features
-
-You are able to do so many stuff in the game like walking, running, building, crafting, shooting, hunting, and so much more thanks to tons of scripting has been implemented to the game
-
-|  Script       | Description                                                  |
-| ------------------- | ------------------------------------------------------------ |
-| `PlayerMovement.cs` | Responsible for the playermovement using platformer way horizontally |
-| `MainMenu.cs` | Responsible for all the menu like MainMenu, Credit Scene, Tutorial and etc |
-| `DeathVoid.cs`  | Responsible the void below that appear as lava so player dies |
-| `GameManager.cs`  | Responsible for the player to collide with the winning trigger |
-| `etc`  | |
 
 <br>
