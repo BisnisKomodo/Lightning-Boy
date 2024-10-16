@@ -4,13 +4,13 @@
       <img width="100%" alt="gif1" src="https://github.com/user-attachments/assets/c2e75d74-4e36-4b87-b083-e829d74aaec0">
     </td>
     <td align="right" width="50%">
-      <img width="100%" alt="gif2" src="https://github.com/user-attachments/assets/0041c7f1-6260-4cba-b1b1-31c6fcd7059d">
+      <img width="100%" alt="gif2" src="https://github.com/user-attachments/assets/60b047cc-980c-4e22-a126-75aa312dbb17">
     </td>
   </tr>
 </table>
 
 <p align="center">
-  <img width="100%" alt="gif3" src="https://github.com/user-attachments/assets/60b047cc-980c-4e22-a126-75aa312dbb17">
+  <img width="100%" alt="gif3" src="https://github.com/user-attachments/assets/0041c7f1-6260-4cba-b1b1-31c6fcd7059d">
 </p>
 
 ##  📜Scripts and Features
